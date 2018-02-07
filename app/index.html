@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#main-content">Home</a></li>
+        <li><a href="#best-practices">Front-End Best Practices</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="main-content">
+      <h1>James Perrone</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe deserunt distinctio inventore sequi, asperiores reprehenderit
+        cupiditate nemo provident exercitationem architecto error ipsa eveniet optio, voluptas fuga? Repellendus provident
+        hic voluptates.</p>
+    </section>
+    <section id="best-practices">
+      <ul>
+        <li>
+          <h2>Never use inline styles.</h2>
+          <p>When creating your markup, don’t ever dare to think about the styling yet, as it would be very hard to override
+            these styles in case you need to. The only moment when it’s not a sin to add styles is once the page has been
+            completely coded.</p>
+        </li>
+        <li>
+          <h2>Include external CSS inside the HEAD tag.</h2>
+          <p>You can place style sheets anywhere but the HTML specification recommends that they be placed within the document
+            HEAD tag. The primary benefit is that your pages will load faster and you’ll swear less.</p>
+        </li>
+        <li>
+          <h2>Consider placing JavaScript at the bottom.</h2>
+          <p>When loading a script, the browser can’t continue until the entire file has been loaded. If you have JavaScript
+            files in order to add functionality, place those files at the bottom, just before the closing body tag. This
+            is a good performance practice and the results are really noticeable.</p>
+        </li>
+        <li>
+          <h2>Never use inline JavaScript.</h2>
+          <p>Repeat it after me to internalize it. We’re not in the ‘90s anymore! Instead, try transferring this code to an
+            external JS file.</p>
+        </li>
+        <li>
+          <h2>Use lowercase in you tags.</h2>
+          <p>It is a good practice to keep your markup lower-case. Capitalizing your markup will work and will probably not
+            affect how your web pages are rendered, but it does affect code readability. Keep it simple.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
