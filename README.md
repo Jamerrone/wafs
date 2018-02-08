@@ -37,4 +37,17 @@ The course repo for 'Web App From Scratch'
 - *https://www.uxpin.com/studio/blog/single-page-vs-multi-page-ui-design-pros-cons/*
 
 ## Best practices
-- test
+- Don't use global variables/objects.
+- Declare variables at top of scope.
+- Use short clear meaningful names (English).
+- Work in strict mode.
+- camelCase your code if(code != Constructor || CONSTANTS).
+- Place external scripts at the bottom of the page.
+- Indent your code.
+- Use 2 spaces for indentation.
+- Do not use `;` (Semicolons).
+- Always Declare Local Variables.
+- Initialize Variables (`let myArray = []` and not `let myArray`).
+- Use `===` & `!==` Comparison.
+- End Your Switches with Defaults.
+- Avoid Using `eval()`. (Runs strings as code.)
