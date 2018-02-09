@@ -1,6 +1,10 @@
 # wafs
 The course repo for 'Web App From Scratch'
 
+## Code Reviews
+- Cas Burggraaf: *https://github.com/Casburggraaf/wafs/pull/3*
+- Mohammed 'Mo' Mulazada: *https://github.com/moniac/wafs/pull/2*
+
 ## Advantages and disadvantages of JavaScript libraries/frameworks
 ### Pros:
 - Het is veel sneller om werkende software te schrijven in frameworks of libraries.
