@@ -4,6 +4,7 @@ The course repo for 'Web App From Scratch'
 ## Code Reviews
 - Cas Burggraaf: *https://github.com/Casburggraaf/wafs/pull/3*
 - Mohammed 'Mo' Mulazada: *https://github.com/moniac/wafs/pull/2*
+- Zekkie: *https://github.com/Zekkie/wafs/pull/1*
 
 ## Advantages and disadvantages of JavaScript libraries/frameworks
 ### Pros:
