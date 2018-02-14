@@ -31,14 +31,22 @@
     init () {
       routie({
         home: () => {
+          document.title = 'Dog Emporium - Home'
           sections.toggle(window.location.hash)
         },
         breeds: () => {
           api.allBreeds('get')
+          document.title = 'Dog Emporium - Breeds'
           sections.toggle(window.location.hash)
         },
         'breeds/:name': name => {
           api.allBreedPictures('get', name)
+          // WHYYYY Give me a .title function please!
+          document.title = `Dog Emporium - ${name.replace(/\b[a-z]/g, function (
+            f
+          ) {
+            return f.toUpperCase()
+          })}`
           sections.toggle('#detail')
         },
         '*': () => {
@@ -137,12 +145,22 @@
     }
   }
 
+  const navigation = {
+    toggle (route) {
+      document.querySelectorAll('nav li a').forEach(section => {
+        section.classList.remove('active')
+      })
+      document.querySelector(`a[href="${route}"]`).classList.add('active')
+    }
+  }
+
   const sections = {
     toggle (route) {
       document.querySelectorAll('section').forEach(section => {
         section.classList.remove('visible') // Hide all sections.
       })
       document.querySelector(route).classList.add('visible') // Display a section based on the route/#.
+      navigation.toggle(route)
     }
   }
   app.init()

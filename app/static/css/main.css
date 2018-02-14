@@ -100,7 +100,8 @@ section img {
 }
 
 #breeds li a:hover,
-#breeds li a:focus {
+#breeds li a:focus,
+#breeds li a.active {
   color: #fff;
   background-color: #e74c3c;
 }
