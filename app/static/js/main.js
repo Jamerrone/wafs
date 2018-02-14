@@ -35,12 +35,12 @@
           sections.toggle(window.location.hash)
         },
         breeds: () => {
-          api.allBreeds('get')
+          api.allBreeds()
           document.title = 'Dog Emporium - Breeds'
           sections.toggle(window.location.hash)
         },
         'breeds/:name': name => {
-          api.allBreedPictures('get', name)
+          api.allBreedPictures(name)
           // WHYYYY Give me a .title function please!
           document.title = `Dog Emporium - ${name.replace(/\b[a-z]/g, function (
             f
@@ -123,25 +123,17 @@
         request.send()
       })
     },
-    allBreeds (type) {
-      if (type === 'get') {
-        this.request('https://dog.ceo/api/breeds/list/all', 'list') // Request API data.
-      } else {
-        console.log('Post')
-      }
+    allBreeds () {
+      this.request('https://dog.ceo/api/breeds/list/all', 'list') // Request API data.
     },
-    allBreedPictures (type, breedName) {
-      if (type === 'get') {
-        this.request(
-          // Request API data.
-          `https://dog.ceo/api/breed/${breedName // Formats the string (breedName) to usable API URL's.
-            .replace(' ', '/')
-            .replace(/\(|\)/g, '')}/images`,
-          'detail'
-        )
-      } else {
-        console.log('Post')
-      }
+    allBreedPictures (breedName) {
+      this.request(
+        // Request API data.
+        `https://dog.ceo/api/breed/${breedName // Formats the string (breedName) to usable API URL's.
+          .replace(' ', '/')
+          .replace(/\(|\)/g, '')}/images`,
+        'detail'
+      )
     }
   }
 
