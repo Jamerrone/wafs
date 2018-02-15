@@ -1,5 +1,6 @@
 # wafs
 The course repo for 'Web App From Scratch'
+*https://jamerrone.github.io/wafs/app/*
 
 ## Code Reviews
 **09/02/2018**
