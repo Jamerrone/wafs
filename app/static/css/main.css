@@ -8,6 +8,7 @@
 
 body {
   font: 16px/1.6rem 'Brandon Grotesque';
+  color: #212121;
 }
 
 h1,
@@ -45,7 +46,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background: rgba(0, 0, 0, .15);
+  background: #d32f2f;
 }
 
 section {
@@ -60,6 +61,42 @@ section img {
   width: 100%;
   height: 15rem;
   object-fit: cover;
+}
+
+#home {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#home h1 {
+  font-size: 10rem;
+  line-height: normal;
+  text-align: center;
+}
+
+#home blockquote {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#home button {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#home button:hover {
+  background-color: #d32f2f;
 }
 
 #dog-detail {
@@ -81,6 +118,7 @@ section img {
   padding: .75rem;
   border: none;
   border-bottom: 2px solid #212121;
+  border-radius: .25rem;
   background-color: #f9f9f9;
 }
 
@@ -88,6 +126,7 @@ section img {
   margin-bottom: .75rem;
   text-align: center;
   border: 1px solid #212121;
+  border-radius: .25rem;
 }
 
 #breeds li a {
@@ -104,4 +143,20 @@ section img {
 #breeds li a.active {
   color: #fff;
   background-color: #e74c3c;
+}
+
+.error-message {
+  display: none;
+  width: 90%;
+  max-width: 35vw;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  text-align: center;
+  border-left: 5px solid #d32f2f;
+  border-radius: .25rem;
+  background-color: #ffcdd2;
+}
+
+.error-message img {
+  object-position: top;
 }

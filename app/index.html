@@ -20,9 +20,12 @@
   </header>
   <main>
     <section id="home">
-      <h1>Home, Yo!</h1>
+      <h1>Woof</h1>
+      <blockquote id="fact">"The first dog chapel was established in 2001. It was built in St. Johnsbury, Vermont, by Stephan Huneck, a children’s book author whose five dogs helped him recuperate from a serious illness."</blockquote>
+      <button>Give me another fact!</button>
     </section>
-    <section id="breeds" class="visible">
+    <section id="breeds">
+      <p class="error-message"><img src="static/images/error-image.gif"></img>Could not connect to the API Server / Network - Please make sure you have a stable internet connection.</p>
       <form>
         <input id="search" type="text" placeholder="Search..." autocomplete="off" autofocus>
       </form>
@@ -30,7 +33,7 @@
         <li><a class="dogBreed"></a></li>
       </ul>
     </section>
-    <section id="detail" class="visible">
+    <section id="detail">
       <ul id="dog-detail">
         <li><img class="detailPicture"></li>
       </ul>
