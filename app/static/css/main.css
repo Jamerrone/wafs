@@ -65,8 +65,8 @@ section img {
 
 #home {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -77,26 +77,38 @@ section img {
 }
 
 #home blockquote {
-  text-align: center;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 #home button {
-  text-align: center;
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
   margin-top: 2rem;
   padding: 1rem 1.5rem;
-  background-color: #e74c3c;
-  border: none;
-  border-radius: 0.25rem;
-  color: white;
   cursor: pointer;
+  text-align: center;
   text-transform: uppercase;
+  color: white;
+  border: none;
+  border-radius: .25rem;
+  background-color: #e74c3c;
 }
 
 #home button:hover {
   background-color: #d32f2f;
+}
+
+@media (max-width: 40rem) {
+  #home {
+    width: 90%;
+  }
+  #home h1 {
+    font-size: 25vw;
+  }
+  #home blockquote {
+    font-size: 1.25rem;
+  }
 }
 
 #dog-detail {
