@@ -1,6 +1,9 @@
 /* global routie, Transparency, XMLHttpRequest */
 {
   const app = {
+    // The app object is mostly used as an application initializer,
+    // for example, it will create event listeners and general
+    // functions/methods.
     init () {
       if (window.location.hash) sections.toggle(window.location.hash)
       this.getNewFact()
@@ -11,11 +14,14 @@
       routes.init()
     },
     getNewFact () {
+      // Replace the current displaying fact with a new random one.
       document.querySelector('#fact').innerHTML = helpers.getRandomArrayItem(
         api.data.facts
       )
     },
     search () {
+      // A simple search method that compares the current input value with
+      // every single list item.
       const input = document.querySelector('#search')
       const filter = input.value.toUpperCase()
       const ul = document.querySelector('#dog-breeds')
@@ -33,6 +39,8 @@
   }
 
   const routes = {
+    // The routes object is mostly used to catch multiple urls and request
+    // the required API data.
     init () {
       routie({
         home () {
@@ -46,6 +54,8 @@
         },
         'breeds/:name' (name) {
           api.fetchBreedDetails(name)
+          // This may look complex, however, all this code does is capitalize
+          // every first letter from every word inside the name string.
           document.title = `Dog Emporium - ${name.replace(/\b[a-z]/g, function (
             f
           ) {
@@ -54,6 +64,7 @@
           sections.toggle('#detail')
         },
         '*': () => {
+          // Catch every other URL path and redirect the user to #home.
           window.location.hash = '#home'
         }
       })
@@ -61,6 +72,8 @@
   }
 
   const template = {
+    // The template object is used to render the right information/screen
+    // based on the type of information passed by the API.
     render (data, type) {
       if (type === 'list') {
         const directives = {
@@ -197,10 +210,15 @@
   }
 
   const navigation = {
+    // The only thing the navigation object can accomplish at its current
+    // state is toggle the active href, this is purely visual. In the future, this
+    // object could be updated with more advanced functionality.
     toggle (route) {
+      // Hide the active state from every nav link.
       document.querySelectorAll('nav li a').forEach(section => {
         section.classList.remove('active')
       })
+      // Show the active state on the current href.
       document
         .querySelector(`a[href="${route}"], a[href="#breeds"]`)
         .classList.add('active')
@@ -208,23 +226,32 @@
   }
 
   const sections = {
+    // Very similar to the navigation object, right now the sections object
+    // can only hide or show the required sections.
     hideAll () {
+      // Hide every section.
       document.querySelectorAll('section').forEach(section => {
         section.classList.remove('visible')
       })
     },
     toggle (route) {
       this.hideAll()
+      // Make sure the website is always scrolled to the top before rendering
+      // a new page.
       window.scrollTo(0, 0)
+      // Show a section based on the current URL/path.
       document.querySelector(route).classList.add('visible')
       navigation.toggle(route)
     }
   }
 
   const helpers = {
+    // The helpers object is the place to store helper functions!
     getRandomArrayItem (array) {
+      // Returns a random array item.
       return array[Math.floor(Math.random() * array.length)]
     }
   }
+  // Initialise the web application.
   app.init()
 }
