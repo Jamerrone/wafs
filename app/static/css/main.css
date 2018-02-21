@@ -141,7 +141,7 @@ section img {
 }
 
 #breeds li {
-  height: calc(50% - 1.5rem);
+  width: calc(50% - 1.5rem);
   margin: .75rem;
   text-align: center;
   border: 1px solid #212121;
