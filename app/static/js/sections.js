@@ -1,4 +1,4 @@
-export const sections = {
+const sections = {
   // Very similar to the navigation object, right now the sections object
   // can only hide or show the required sections.
   hideAll () {
@@ -17,3 +17,5 @@ export const sections = {
     navigation.toggle(route)
   }
 }
+
+export default sections

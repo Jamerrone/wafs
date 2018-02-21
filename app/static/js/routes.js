@@ -1,4 +1,4 @@
-export const routes = {
+const routes = {
   // The routes object is mostly used to catch multiple urls and request
   // the required API data.
   init () {
@@ -30,3 +30,5 @@ export const routes = {
     })
   }
 }
+
+export default routes

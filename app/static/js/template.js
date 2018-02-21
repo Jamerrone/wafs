@@ -1,4 +1,4 @@
-export const template = {
+const template = {
   // The template object is used to render the right information/screen
   // based on the type of information passed by the API.
   render (data, type) {
@@ -32,3 +32,5 @@ export const template = {
     }
   }
 }
+
+export default template

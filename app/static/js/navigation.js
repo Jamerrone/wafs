@@ -1,4 +1,4 @@
-export const navigation = {
+const navigation = {
   // The only thing the navigation object can accomplish at its current
   // state is toggle the active href, this is purely visual. In the future, this
   // object could be updated with more advanced functionality.
@@ -13,3 +13,5 @@ export const navigation = {
       .classList.add('active')
   }
 }
+
+export default navigation

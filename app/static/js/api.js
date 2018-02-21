@@ -1,4 +1,4 @@
-export const api = {
+const api = {
   data: {
     facts: [
       '"In general, smaller breeds live longer than larger breeds."',
@@ -96,3 +96,5 @@ export const api = {
     }
   }
 }
+
+export default api
