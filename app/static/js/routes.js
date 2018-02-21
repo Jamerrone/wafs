@@ -1,3 +1,6 @@
+import sections from './sections.js'
+import api from './api.js'
+
 const routes = {
   // The routes object is mostly used to catch multiple urls and request
   // the required API data.
