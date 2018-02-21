@@ -28,7 +28,7 @@ import helpers from './modules/helpers.js'
       const input = document.querySelector('#search')
       const filter = input.value.toUpperCase()
       const ul = document.querySelector('#dog-breeds')
-      const li = ul.getElementsByTagName('li')
+      const li = ul.querySelectorAll('li')
 
       li.forEach(li => {
         const a = li.getElementsByTagName('a')[0]

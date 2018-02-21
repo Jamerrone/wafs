@@ -135,8 +135,14 @@ section img {
   background-color: #f9f9f9;
 }
 
+#breeds ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #breeds li {
-  margin-bottom: .75rem;
+  height: calc(50% - 1.5rem);
+  margin: .75rem;
   text-align: center;
   border: 1px solid #212121;
   border-radius: .25rem;
