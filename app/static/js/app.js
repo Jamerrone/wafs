@@ -30,14 +30,14 @@ import helpers from './modules/helpers.js'
       const ul = document.querySelector('#dog-breeds')
       const li = ul.getElementsByTagName('li')
 
-      for (let i = 0; i < li.length; i++) {
-        const a = li[i].getElementsByTagName('a')[0]
+      li.forEach(li => {
+        const a = li.getElementsByTagName('a')[0]
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = ''
+          li.style.display = ''
         } else {
-          li[i].style.display = 'none'
+          li.style.display = 'none'
         }
-      }
+      })
     }
   }
 

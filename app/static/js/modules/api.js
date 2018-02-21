@@ -2,7 +2,10 @@ import template from './template.js'
 import helpers from './helpers.js'
 
 const api = {
+  // The API object is used to request data and store data in the
+  // computer memory.
   data: {
+    // Array full of random dog facts.
     facts: [
       '"In general, smaller breeds live longer than larger breeds."',
       '"In Croatia, scientists discovered that lampposts were falling down because a chemical in the urine of male dogs was rotting the metal."',
@@ -27,6 +30,8 @@ const api = {
     ]
   },
   request (url, type, caller, breedName) {
+    // This method is used to request data from the API, however, it will
+    // need quite a few parameters. DO NOT CALL THIS METHODE ON ITS OWN.
     helpers.loader.show()
     return new Promise((resolve, reject) => {
       const request = new XMLHttpRequest()
@@ -57,6 +62,21 @@ const api = {
     })
   },
   formatData (data) {
+    // Formats the API raw data into useable, simpler data. Especially
+    // needed for transparency.
+    //
+    // FROM:
+    // {
+    //   'beagle': [],
+    //   'bulldog': ['french', 'boston']
+    // }
+    //
+    // TO:
+    // [
+    //  'beagle',
+    //  'bulldog (french)',
+    //  'bulldog (boston)',
+    // ]
     data = data.message || data
     return Object.keys(data).reduce((arr, key) => {
       if (data[key].length) {
@@ -70,6 +90,7 @@ const api = {
     }, [])
   },
   fetchAllBreeds () {
+    // Load or Request data from all dogs. ('List View')
     if (this.data.allBreeds) {
       template.render(this.formatData(this.data.allBreeds), 'list')
     } else {
@@ -81,6 +102,7 @@ const api = {
     }
   },
   fetchBreedDetails (breedName) {
+    // Load or Request data from a single dog. ('Detail View')
     const formatedBreedName = breedName.replace(' ', '/').replace(/\(|\)/g, '')
     if (this.data[formatedBreedName]) {
       template.render(this.data[formatedBreedName], 'detail')
