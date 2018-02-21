@@ -183,7 +183,7 @@ section img {
   width: 100%;
   height: calc(100vh - 3.6rem);
   user-select: none;
-  transition: opacity .5s ease-in-out;
+  transition: opacity .25s ease-in-out;
   pointer-events: none;
   opacity: 0;
   background-color: #f8f6f8;

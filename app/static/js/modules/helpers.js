@@ -6,11 +6,9 @@ const helpers = {
   },
   loader: {
     show () {
-      document.querySelector('body').style.position = 'fixed'
       document.querySelector('#loader').classList.add('visible')
     },
     hide () {
-      document.querySelector('body').style.position = 'static'
       document.querySelector('#loader').classList.remove('visible')
     }
   }
