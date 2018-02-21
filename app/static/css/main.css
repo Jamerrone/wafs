@@ -39,7 +39,7 @@ nav ul {
 nav a {
   display: inline-block;
   padding: 1rem;
-  transition: all .2s ease-in-out;
+  transition: background .2s ease-in-out;
   text-decoration: none;
   color: #fff;
 }
@@ -145,7 +145,7 @@ section img {
 #breeds li a {
   display: block;
   padding: .25rem;
-  transition: all .2s ease-in-out;
+  transition: background .2s ease-in-out, color .2s ease-in-out;
   text-decoration: none;
   text-transform: capitalize;
   color: #212121;
@@ -183,9 +183,10 @@ section img {
   width: 100%;
   height: calc(100% - 3.6rem);
   user-select: none;
+  transition: opacity .5s ease-in-out;
   pointer-events: none;
   opacity: 0;
-  background-color: #fff;
+  background-color: #f8f6f8;
   align-items: center;
   justify-content: center;
 }
