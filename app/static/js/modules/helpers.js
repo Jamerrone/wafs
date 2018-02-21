@@ -9,7 +9,9 @@ const helpers = {
       document.querySelector('#loader').classList.add('visible')
     },
     hide () {
-      document.querySelector('#loader').classList.remove('visible')
+      setTimeout(() => {
+        document.querySelector('#loader').classList.remove('visible')
+      }, 500)
     }
   }
 }
