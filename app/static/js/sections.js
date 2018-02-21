@@ -1,3 +1,5 @@
+import navigation from './navigation.js'
+
 const sections = {
   // Very similar to the navigation object, right now the sections object
   // can only hide or show the required sections.

@@ -1,8 +1,6 @@
 import routes from './routes.js'
-import template from './template.js'
 import api from './api.js'
 import sections from './sections.js'
-import navigation from './navigation.js'
 import helpers from './helpers.js'
 
 {
