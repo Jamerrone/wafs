@@ -1,3 +1,5 @@
+import template from './template.js'
+
 const api = {
   data: {
     facts: [

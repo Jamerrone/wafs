@@ -1,5 +1,3 @@
-import template from './template.js'
-
 const routes = {
   // The routes object is mostly used to catch multiple urls and request
   // the required API data.
