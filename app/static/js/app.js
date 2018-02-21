@@ -1,4 +1,4 @@
-import routes from './routes.js'
+import routes from 'routes.js'
 import template from './template.js'
 import api from './api.js'
 import sections from './sections.js'
