@@ -1,5 +1,6 @@
 import sections from './sections.js'
 import api from './api.js'
+import helpers from './helpers.js'
 
 const routes = {
   // The routes object is mostly used to catch multiple urls and request
@@ -12,6 +13,7 @@ const routes = {
       },
       breeds () {
         api.fetchAllBreeds()
+        helpers.loader.hide()
         document.title = 'Dog Emporium - Breeds'
         sections.toggle(window.location.hash)
       },
@@ -24,6 +26,7 @@ const routes = {
         ) {
           return f.toUpperCase()
         })}`
+        helpers.loader.hide()
         sections.toggle('#detail')
       },
       '*': () => {
