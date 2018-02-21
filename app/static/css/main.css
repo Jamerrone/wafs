@@ -175,15 +175,19 @@ section img {
 }
 
 #loader {
-  background-color: #ffffff;
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
   position: absolute;
-  top: 0;
-  user-select: none;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  height: calc(100% - 3.6rem);
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
 }
 
 #loader.visible {
