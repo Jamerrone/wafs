@@ -1,7 +1,7 @@
-import routes from './routes.js'
-import api from './api.js'
-import sections from './sections.js'
-import helpers from './helpers.js'
+import routes from './modules/routes.js'
+import api from './modules/api.js'
+import sections from './modules/sections.js'
+import helpers from './modules/helpers.js'
 
 {
   const app = {

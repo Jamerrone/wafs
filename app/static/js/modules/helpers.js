@@ -3,6 +3,14 @@ const helpers = {
   getRandomArrayItem (array) {
     // Returns a random array item.
     return array[Math.floor(Math.random() * array.length)]
+  },
+  loader: {
+    show () {
+      document.querySelector('#loader').classList.add('visible')
+    },
+    hide () {
+      document.querySelector('#loader').classList.remove('visible')
+    }
   }
 }
 

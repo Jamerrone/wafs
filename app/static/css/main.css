@@ -173,3 +173,19 @@ section img {
 .error-message img {
   object-position: top;
 }
+
+#loader {
+  background-color: #ffffff;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  user-select: none;
+  width: 100%;
+}
+
+#loader.visible {
+  opacity: 1;
+}

@@ -1,4 +1,5 @@
-import template from './template.js'
+import template from './modules/template.js'
+import helpers from './modules/helpers.js'
 
 const api = {
   data: {
@@ -26,6 +27,7 @@ const api = {
     ]
   },
   request (url, type, caller, breedName) {
+    helpers.loader.show()
     return new Promise((resolve, reject) => {
       const request = new XMLHttpRequest()
       request.open('GET', `${url}`, true)
@@ -41,6 +43,7 @@ const api = {
           console.log(this.data)
           if (type === 'list') result = this.formatData(result)
           if (type === 'detail') result = result.message
+          helpers.loader.hide()
           resolve(template.render(result, type))
         } else {
           console.log('We reached our target server, but it returned an error.')

@@ -1,4 +1,4 @@
-import navigation from './navigation.js'
+import navigation from './modules/navigation.js'
 
 const sections = {
   // Very similar to the navigation object, right now the sections object
