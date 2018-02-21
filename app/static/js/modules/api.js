@@ -1,5 +1,5 @@
-import template from './modules/template.js'
-import helpers from './modules/helpers.js'
+import template from './template.js'
+import helpers from './helpers.js'
 
 const api = {
   data: {
