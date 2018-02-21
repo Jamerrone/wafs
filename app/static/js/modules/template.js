@@ -4,19 +4,21 @@ const template = {
   render (data, type) {
     if (type === 'list') {
       const directives = {
+        // Fill every href with its own URL.
         dogBreed: {
           href: function () {
             return `#breeds/${this.dogBreed}`
           }
         }
       }
+      // Render the page.
       Transparency.render(
         document.querySelector('#dog-breeds'),
         data,
         directives
       )
     } else if (type === 'detail') {
-      const pictures = data
+      // Fill every image src with its own URL.
       const directives = {
         detailPicture: {
           src: function () {
@@ -24,9 +26,10 @@ const template = {
           }
         }
       }
+      // Render the page.
       Transparency.render(
         document.querySelector('#dog-detail'),
-        pictures,
+        data,
         directives
       )
     }

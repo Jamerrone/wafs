@@ -8,25 +8,22 @@ const routes = {
   init () {
     routie({
       home () {
+        // Home view.
         document.title = 'Dog Emporium - Home'
         sections.toggle(window.location.hash)
       },
       breeds () {
+        // List view.
         api.fetchAllBreeds()
-        helpers.loader.hide()
         document.title = 'Dog Emporium - Breeds'
         sections.toggle(window.location.hash)
       },
       'breeds/:name' (name) {
+        // Detail view.
         api.fetchBreedDetails(name)
-        // This may look complex, however, all this code does is capitalize
-        // every first letter from every word inside the name string.
-        document.title = `Dog Emporium - ${name.replace(/\b[a-z]/g, function (
-          f
-        ) {
-          return f.toUpperCase()
-        })}`
-        helpers.loader.hide()
+        document.title = `Dog Emporium - ${helpers.capitalizeFirstLetters(
+          name
+        )}`
         sections.toggle('#detail')
       },
       '*': () => {

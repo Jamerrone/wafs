@@ -182,7 +182,7 @@ section img {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 3.6rem);
+  height: calc(100vh - 3.5rem);
   user-select: none;
   transition: opacity .25s ease-in-out;
   pointer-events: none;

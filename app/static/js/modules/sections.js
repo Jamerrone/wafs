@@ -1,10 +1,12 @@
 import navigation from './navigation.js'
+import helpers from './helpers.js'
 
 const sections = {
   // Very similar to the navigation object, right now the sections object
   // can only hide or show the required sections.
   hideAll () {
     // Hide every section.
+    helpers.loader.hide()
     document.querySelectorAll('section').forEach(section => {
       section.classList.remove('visible')
     })

@@ -37,10 +37,8 @@ const api = {
           if (caller === 'fetchAllBreeds') {
             this.data.allBreeds = result.message
           } else if (caller === 'fetchBreedDetails') {
-            console.log(result)
             this.data[breedName] = result.message
           }
-          console.log(this.data)
           if (type === 'list') result = this.formatData(result)
           if (type === 'detail') result = result.message
           resolve(template.render(result, type))
@@ -73,10 +71,8 @@ const api = {
   },
   fetchAllBreeds () {
     if (this.data.allBreeds) {
-      console.log('Loading data...')
       template.render(this.formatData(this.data.allBreeds), 'list')
     } else {
-      console.log('Fetching data...')
       return this.request(
         'https://dog.ceo/api/breeds/list/all',
         'list',
@@ -87,10 +83,8 @@ const api = {
   fetchBreedDetails (breedName) {
     const formatedBreedName = breedName.replace(' ', '/').replace(/\(|\)/g, '')
     if (this.data[formatedBreedName]) {
-      console.log(`Loading ${formatedBreedName} details...`)
       template.render(this.data[formatedBreedName], 'detail')
     } else {
-      console.log(`Fetching ${formatedBreedName} details...`)
       return this.request(
         `https://dog.ceo/api/breed/${formatedBreedName}/images`,
         'detail',
