@@ -6,7 +6,6 @@ const sections = {
   // can only hide or show the required sections.
   hideAll () {
     // Hide every section.
-    window.onload = () => helpers.loader.hide()
     document.querySelectorAll('section').forEach(section => {
       section.classList.remove('visible')
     })
@@ -17,6 +16,7 @@ const sections = {
     // a new page.
     window.scrollTo(0, 0)
     // Show a section based on the current URL/path.
+    window.onload = () => helpers.loader.hide()
     document.querySelector(route).classList.add('visible')
     navigation.toggle(route)
   }
