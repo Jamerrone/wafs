@@ -1,5 +1,5 @@
 # Web App From Scratch
-**Please use Google Chrome for this demo.**</br>
+**Please use Google Chrome or Firefox for this demo.**</br>
 The website can be found [*here*](https://jamerrone.github.io/wafs/app/).</br></br>
 ![Demo Screenshot.](./app/static/images/demo.png "Demo Screenshot.")
 
@@ -24,13 +24,6 @@ For this project, I used the [*Dog API*](https://dog.ceo/dog-api/) made by [*Ell
  - Rewrite the code using functional programming principles.
  - Make use of separated HTML files and/or new templating/render engine.
  - Redesign the website styles.
-
-## Dependencies/Sources
-#### Libraries
-- [Transparency](https://github.com/leonidas/transparency)
-- [Routie](https://github.com/jgallen23/routie)
-#### Data Sources
-- [Dog API](https://dog.ceo/dog-api/)
 
 ## Code Reviews
 #### 09/02/2018
@@ -92,3 +85,10 @@ For this project, I used the [*Dog API*](https://dog.ceo/dog-api/) made by [*Ell
 - Use `===` & `!==` Comparison.
 - End Your Switches with Defaults.
 - Avoid Using `eval()`. (Runs strings as code.)
+
+## Dependencies/Sources
+#### Libraries
+- [Transparency](https://github.com/leonidas/transparency)
+- [Routie](https://github.com/jgallen23/routie)
+#### Data Sources
+- [Dog API](https://dog.ceo/dog-api/)
