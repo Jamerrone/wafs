@@ -27,6 +27,10 @@ const api = {
           }
           if (type === 'list') result = this.formatData(result)
           if (type === 'detail') result = result.message
+          window.onload = function () {
+            console.log('test')
+            helpers.loader.hide()
+          }
           resolve(template.render(result, type))
         } else {
           console.log('We reached our target server, but it returned an error.')

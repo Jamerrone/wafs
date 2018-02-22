@@ -15,10 +15,6 @@ const sections = {
     // Make sure the website is always scrolled to the top before rendering
     // a new page.
     window.scrollTo(0, 0)
-    window.onload = function () {
-      console.log('test')
-      helpers.loader.hide()
-    }
     // Show a section based on the current URL/path.
     document.querySelector(route).classList.add('visible')
     navigation.toggle(route)
