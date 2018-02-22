@@ -20,7 +20,7 @@ const helpers = {
       // A very small delay in order to give the image rendering more time.
       setTimeout(() => {
         document.querySelector('#loader').classList.remove('visible')
-      }, 750)
+      }, 500)
     }
   }
 }
