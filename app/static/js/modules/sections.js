@@ -16,7 +16,7 @@ const sections = {
     // a new page.
     window.scrollTo(0, 0)
     // Make sure the first 30 images are loaded before hiding the loader.
-    if (document.querySelector('img')) {
+    if (window.location.hash.indexOf('#breeds/') > -1) {
       document.querySelector('img').addEventListener('load', () => {
         helpers.loader.hide()
       })
