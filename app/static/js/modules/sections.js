@@ -17,7 +17,7 @@ const sections = {
     window.scrollTo(0, 0)
     // Make sure the first 30 images are loaded before hiding the loader.
     document
-      .querySelector('img:nth-of-type(30), *')
+      .querySelector('img, #home, #breeds')
       .addEventListener('load', () => {
         helpers.loader.hide()
       })
