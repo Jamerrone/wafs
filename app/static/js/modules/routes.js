@@ -15,12 +15,14 @@ const routes = {
       },
       breeds () {
         // List view.
+        helpers.loader.show()
         api.fetchAllBreeds()
         document.title = 'Dog Emporium - Breeds'
         sections.toggle(window.location.hash)
       },
       'breeds/:name' (name) {
         // Detail view.
+        helpers.loader.show()
         api.fetchBreedDetails(name)
         document.title = `Dog Emporium - ${helpers.capitalizeFirstLetters(
           name

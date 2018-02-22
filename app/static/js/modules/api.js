@@ -13,7 +13,6 @@ const api = {
   request (url, type, caller, breedName) {
     // This method is used to request data from the API, however, it will
     // need quite a few parameters. DO NOT CALL THIS METHODE ON ITS OWN.
-    helpers.loader.show()
     return new Promise((resolve, reject) => {
       const request = new XMLHttpRequest()
       request.open('GET', `${url}`, true)
