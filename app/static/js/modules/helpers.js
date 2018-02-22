@@ -18,7 +18,9 @@ const helpers = {
     },
     hide () {
       // A very small delay in order to give the image rendering more time.
-      document.querySelector('#loader').classList.remove('visible')
+      setTimeout(() => {
+        document.querySelector('#loader').classList.remove('visible')
+      }, 500)
     }
   }
 }
