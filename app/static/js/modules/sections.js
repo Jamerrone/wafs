@@ -16,11 +16,9 @@ const sections = {
     // a new page.
     window.scrollTo(0, 0)
     // Make sure the first 30 images are loaded before hiding the loader.
-    document
-      .querySelector('img, #home, #breeds')
-      .addEventListener('load', () => {
-        helpers.loader.hide()
-      })
+    document.querySelector('img, *').addEventListener('load', () => {
+      helpers.loader.hide()
+    })
     // Show a section based on the current URL/path.
     document.querySelector(route).classList.add('visible')
     navigation.toggle(route)
