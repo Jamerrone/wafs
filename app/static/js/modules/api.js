@@ -71,10 +71,10 @@ const api = {
   },
   fetchAllBreeds () {
     // Load or Request data from all dogs. ('List View')
-    helpers.loader.show()
     if (this.data.allBreeds) {
       template.render(this.formatData(this.data.allBreeds), 'list')
     } else {
+      helpers.loader.show()
       return this.request(
         'https://dog.ceo/api/breeds/list/all',
         'list',
