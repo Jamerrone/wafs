@@ -1,3 +1,4 @@
+/* global routie */
 import sections from './sections.js'
 import api from './api.js'
 import helpers from './helpers.js'
