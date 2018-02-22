@@ -6,10 +6,10 @@ const sections = {
   // can only hide or show the required sections.
   hideAll () {
     // Hide every section.
+    window.onload = () => helpers.loader.hide()
     document.querySelectorAll('section').forEach(section => {
       section.classList.remove('visible')
     })
-    window.onload = () => helpers.loader.hide()
   },
   toggle (route) {
     this.hideAll()
