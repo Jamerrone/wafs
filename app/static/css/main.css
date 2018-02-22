@@ -26,6 +26,8 @@ li {
 
 nav {
   background-color: #e74c3c;
+  position: relative;
+  z-index: 9999;
 }
 
 nav ul {
@@ -182,13 +184,13 @@ section img {
 
 #loader {
   position: fixed;
-  z-index: 9999;
+  z-index: 9990;
   bottom: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 3.5rem);
+  height: 100vh;
   user-select: none;
   transition: opacity .25s ease-in-out;
   pointer-events: none;
