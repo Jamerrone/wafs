@@ -13,7 +13,6 @@ const api = {
   request (url, type, caller, breedName) {
     // This method is used to request data from the API, however, it will
     // need quite a few parameters. DO NOT CALL THIS METHODE ON ITS OWN.
-    helpers.loader.show()
     return new Promise((resolve, reject) => {
       const request = new XMLHttpRequest()
       request.open('GET', `${url}`, true)
@@ -72,6 +71,7 @@ const api = {
   },
   fetchAllBreeds () {
     // Load or Request data from all dogs. ('List View')
+    helpers.loader.show()
     if (this.data.allBreeds) {
       template.render(this.formatData(this.data.allBreeds), 'list')
     } else {
@@ -85,6 +85,7 @@ const api = {
   fetchBreedDetails (breedName) {
     // Load or Request data from a single dog. ('Detail View')
     const formatedBreedName = breedName.replace(' ', '/').replace(/\(|\)/g, '')
+    helpers.loader.show()
     if (this.data[formatedBreedName]) {
       template.render(this.data[formatedBreedName], 'detail')
     } else {
