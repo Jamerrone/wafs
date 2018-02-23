@@ -150,6 +150,12 @@ section img {
   border-radius: .25rem;
 }
 
+@media(max-width: 46.88rem) {
+  #breeds li {
+    width: 100%
+  }
+}
+
 #breeds li a {
   display: block;
   padding: .25rem;
@@ -197,6 +203,12 @@ section img {
   background-color: #f8f6f8;
   align-items: center;
   justify-content: center;
+}
+
+@media(max-width: 46.88rem) {
+  #loader img {
+    max-width: 90%;
+  }
 }
 
 #loader.visible {
