@@ -8,7 +8,6 @@ import helpers from './modules/helpers.js'
     // The app object is mostly used as an application initializer,
     // for example, it will create event listeners and general methods.
     init () {
-      // if (window.location.hash) sections.toggle(window.location.hash)
       this.getNewFact()
       document
         .querySelector('button')
